@@ -1,0 +1,192 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Plus Jakarta Sans';
+}
+
+body{
+  display: grid;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.mortgage{
+  width: 80%;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.mortgage-input form{
+  padding: 30px 15px;
+}
+
+.mortgage-input .head{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.mortgage-input .head a{
+  margin-top: 10px;
+}
+
+.mortgage-input input{
+  width: 100%;
+  padding: 7px 0px 7px 50px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border: 1px solid hsl(200, 26%, 54%);
+}
+
+.mortgage-input input:focus{
+  border: 1px solid hsl(61, 70%, 52%);
+  outline: none;
+}
+
+
+.form-input{
+  position: relative;
+}
+
+.mortgage-input .term input, .mortgage-input .rate input{
+  padding-left: 15px;
+}
+  
+/* The texts on the inputs(they're not placeholders) */
+.input-text {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  pointer-events: none;
+  transition: 0.3s;
+  background-color: hsl(202, 86%, 94%);
+  padding: 7px 15px ;
+  margin-top: 2px;
+  margin-left: 1px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+}
+
+.input-textb {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  pointer-events: none;
+  transition: 0.3s;
+  background-color: hsl(202, 86%, 94%);
+  padding: 7px 15px ;
+  margin-top: 2px;
+  margin-right: 13px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+/* Changing apperance of the pseudo placeholders when input is active */
+.form-input:focus-within .input-text, .form-input:focus-within .input-textb{
+  background-color: hsl(61, 70%, 52%);
+}
+
+/* Styling the radio segment */
+.radio-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+  
+/* Hide default radio */
+.radio-container input[type="radio"] {
+  width: auto;
+  margin: unset;
+}
+  
+/* When the radio is checked, style the parent div */
+.radio-container input[type="radio"]:checked + label {
+  font-weight: bold;
+}
+  
+/* Use `has()` if supported */
+.radio-container:has(input:checked) {
+  background-color: hsl(61, 73%, 85%);
+  color: white;
+  border-color: hsl(61, 70%, 52%);
+  accent-color: hsl(61, 70%, 52%);
+}
+  
+/* Fallback: Use adjacent selector trick */
+input[type="radio"]:checked + label {
+  color: black;
+}
+  
+/* Add smooth transition */
+.radio-container:hover {
+  background-color: #f0f0f0;
+}
+  
+/* Styling the button */
+.mortgage-input .mg-btn{
+  background-color: hsl(61, 70%, 52%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
+.mortgage-output{
+  background-color: hsl(201, 53%, 20%);
+  color: white;  border-top-right-radius: 12px;
+  border-bottom-left-radius: 46px;
+  border-bottom-right-radius: 12px;
+  display: flex;
+}
+
+.mortgage-output .empty{
+  /* display: none; */
+  text-align: center;
+  align-self: center;
+}
+
+.mortgage-output .results{
+  display: none;
+  padding: 30px 20px;
+}
+
+.mortgage-output .mg-results{
+  background-color: hsl(202, 55%, 16%);
+  border-radius: 10px;
+  padding: 25px 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mortgage-output .mg-results .top-bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: hsl(61, 70%, 52%);
+  border-radius: 16px;
+}
+
+.mortgage-output .results h6, .mortgage-output .results p{
+  opacity: .7;
+}
+
+.mortgage-output .mg-results h1{
+  color: hsl(61, 70%, 52%);
+  font-weight: bold;
+}
