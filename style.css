@@ -144,6 +144,10 @@ input[type="radio"]:checked + label {
   margin-top: 15px;
 }
 
+.mortgage-input .mg-btn:hover{
+  background-color: hsl(61, 78%, 66%);
+}
+
 
 .mortgage-output{
   background-color: hsl(201, 53%, 20%);
